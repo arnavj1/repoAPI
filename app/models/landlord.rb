@@ -4,7 +4,7 @@ class Landlord < ApplicationRecord
     has_many :properties
     has_many :tenants, through: :properties
     has_many :reminders
-    has_many :maintenances, through: :tenants
+    has_many :maintenances
 
     
     validates_presence_of :name
@@ -18,6 +18,9 @@ class Landlord < ApplicationRecord
 
     
     scope :alphabetical, -> { order(:username) }
+
+
+    before_save :reformat_phone
 
 
     

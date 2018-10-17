@@ -1,8 +1,10 @@
 class Tenant < ApplicationRecord
 
+    has_secure_password
+
     belongs_to :property
     has_many :maintenances
-    has_many :reminders, through: :landlord
+    has_many :reminders
     has_one :landlord, through: :property
 
 
@@ -19,6 +21,9 @@ class Tenant < ApplicationRecord
     scope :alphabetical, -> { order(:username) }
 
 
+    before_save :reformat_phone
+
+
     
     def reformat_phone
         phone = self.phone.to_s #conversion to string
@@ -26,6 +31,6 @@ class Tenant < ApplicationRecord
         self.phone = phone #reset phone
     end
 
-    
+
 
 end
