@@ -7,4 +7,9 @@ class Maintenance < ApplicationRecord
     validates_date :created_on, on_or_before: lambda { Date.current }
 
 
+    scope :chronological, -> { order('created_on') }
+    scope :past, -> { where('closed_on < ?', Date.today) }
+
+
+
 end

@@ -4,4 +4,8 @@ class Reminder < ApplicationRecord
 
     validates_presence_of :title, :description, :created_on
 
+
+    scope :chronological, -> { order('created_on') }
+    scope :past, -> { where('removed_on < ?', Date.today) }
+
 end
