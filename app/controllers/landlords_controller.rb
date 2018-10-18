@@ -14,7 +14,7 @@ class LandlordsController < ApplicationController
     render json: @landlord
   end
 
-  # POST /children
+
   def create
     @landlord = Landlord.new(landlord_params)
 
@@ -25,19 +25,20 @@ class LandlordsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /children/1
+
   def update
-    if @child.update(child_params)
-      render json: @child
+    if @landlord.update(landlord_params)
+      render json: @landlord
     else
-      render json: @child.errors, status: :unprocessable_entity
+      render json: @landlord.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /children/1
+
   def destroy
     @landlord.destroy
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
