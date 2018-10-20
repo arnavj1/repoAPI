@@ -48,6 +48,6 @@ class LandlordsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def landlord_params
-      params.permit(:name)
+      params.permit(:name, :username)
     end
 end
