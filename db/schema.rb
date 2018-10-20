@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20181016021258) do
     t.string "photo"
     t.date "created_on"
     t.date "closed_on"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
