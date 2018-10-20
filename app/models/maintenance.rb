@@ -9,6 +9,7 @@ class Maintenance < ApplicationRecord
 
     scope :chronological, -> { order('created_on') }
     scope :past, -> { where('closed_on < ?', Date.today) }
+    scope :active, -> { where(active: true) }
 
 
 
