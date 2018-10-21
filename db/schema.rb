@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20181016021258) do
     t.integer "rent"
     t.date "start_date"
     t.date "end_date"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20181016021258) do
     t.string "phone"
     t.string "username"
     t.string "password_digest"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

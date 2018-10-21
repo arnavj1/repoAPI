@@ -19,6 +19,8 @@ class Tenant < ApplicationRecord
 
     
     scope :alphabetical, -> { order(:username) }
+    scope :active, -> { where(active: true) }
+
 
 
     before_save :reformat_phone
