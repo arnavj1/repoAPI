@@ -48,6 +48,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def property_params
-      params.permit(:addr_line1, :city, :state, :zip)
+      params.permit(:addr_line1, :city, :state, :zip, :active)
     end
 end
