@@ -26,13 +26,13 @@ class RemindersController < ApplicationController
   end
 
 
-  # def update
-  #   if @reminder.update(reminder_params)
-  #     render json: @reminder
-  #   else
-  #     render json: @reminder.errors, status: :unprocessable_entity
-  #   end
-  # end
+  def update
+    if @reminder.update(reminder_params)
+      render json: @reminder
+    else
+      render json: @reminder.errors, status: :unprocessable_entity
+    end
+  end
 
 
   def destroy
