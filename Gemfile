@@ -19,6 +19,9 @@ gem 'puma', '~> 3.7'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.11'
 
+gem 'time_date_helpers', '0.0.2'
+gem 'validates_timeliness', '4.0.2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
