@@ -4,10 +4,10 @@ class LandlordsController < ApplicationController
   before_action :set_landlord, only: [:show, :update, :destroy]
 
 
-  # def index
-  #   @landlords = Landlord.all
-  #   render json: @landlords
-  # end
+  def index
+    @landlords = Landlord.all
+    render json: @landlords
+  end
 
 
   def show
