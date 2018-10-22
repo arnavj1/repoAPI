@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20181016021258) do
     t.integer "rent"
     t.date "start_date"
     t.date "end_date"
-    t.integer "landlord_id"
     t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
