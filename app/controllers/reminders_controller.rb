@@ -81,6 +81,6 @@ class RemindersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def reminder_params
-      params.permit(:title, :description)
+      params.permit(:title, :description, :created_on)
     end
 end

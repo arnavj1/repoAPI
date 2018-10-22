@@ -10,6 +10,7 @@ class CreateProperties < ActiveRecord::Migration[5.1]
       t.date :start_date
       t.date :end_date
       t.boolean :active, default: true
+      t.references :landlord, foreign_key: true
 
       t.timestamps
     end

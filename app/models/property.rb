@@ -8,6 +8,7 @@ class Property < ApplicationRecord
     validate :not_duplicate?, on: :create
 
 
+
     scope :active, -> { where(active: true) }
 
 

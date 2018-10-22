@@ -33,6 +33,10 @@ class Tenant < ApplicationRecord
         self.phone = phone #reset phone
     end
 
+    #taken from PATS code
+    def self.authenticate(username, password)
+        find_by_username(username).try(:authenticate, password)
+    end
 
 
 end
