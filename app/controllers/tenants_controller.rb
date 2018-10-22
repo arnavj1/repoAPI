@@ -1,5 +1,46 @@
 class TenantsController < ApplicationController
   # Controller Code
+  swagger_controller :tenants, "Tenant Management"
+
+  swagger_api :index do
+    summary "Fetches all Tenants"
+    notes "This lists all the tenants"
+  end
+
+  swagger_api :show do
+    summary "Shows one tenant"
+    param :path, :id, :integer, :required, "Tenant ID"
+    notes "This lists the details of one tenant"
+    response :not_found
+  end
+
+  swagger_api :create do
+    summary "Creates a new Tenant"
+    param :form, :name, :string, :required, "Full name"
+    param :form, :phone, :string, :required, "Tenant phone number"
+    param :form, :username, :string, :required, "Username"
+    param :form, :password, :string, :required, "Password"
+    param :form, :password_confirmation, :required, "Password Confirmation"
+    response :not_acceptable
+  end
+
+  swagger_api :update do
+    summary "Updates an existing Tenant"
+    param :path, :id, :integer, :required, "Tenant ID"
+    param :form, :name, :string, "Full name"
+    param :form, :phone, :string, "Tenant phone number"
+    param :form, :username, :string, "Username"
+    param :form, :password, :string, "Password"
+    param :form, :password_confirmation, :string, "Password Confirmation"
+    response :not_acceptable
+  end
+
+  swagger_api :destroy do
+    summary "Deletes an existing Tenant"
+    param :path, :id, :integer, :required, "Tenant ID"
+    response :not_found
+  end
+
 
   before_action :set_tenant, only: [:show, :update, :destroy]
 

@@ -1,0 +1,188 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "landlords",
+  "apis": [
+    {
+      "path": "/landlords.json",
+      "operations": [
+        {
+          "summary": "Fetches all Landlords",
+          "notes": "This lists all the landlords",
+          "nickname": "Landlords#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/landlords.json",
+      "operations": [
+        {
+          "summary": "Creates a new Landlord",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "name",
+              "type": "string",
+              "description": "Full name",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "phone",
+              "type": "string",
+              "description": "Landlord phone number",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "username",
+              "type": "string",
+              "description": "Username",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "password",
+              "type": "string",
+              "description": "Password",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "password_confirmation",
+              "type": "required",
+              "description": null,
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Landlords#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/landlords/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Landlord",
+          "notes": "This lists the details of one landlord",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Landlord ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Landlords#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/landlords/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates an existing Landlord",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Landlord ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "name",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "phone",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "username",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "password",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "password_confirmation",
+              "type": "string",
+              "description": null,
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Landlords#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/landlords/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing Landlord",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Landlord ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Landlords#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

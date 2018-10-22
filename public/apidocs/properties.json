@@ -1,0 +1,209 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "properties",
+  "apis": [
+    {
+      "path": "/properties.json",
+      "operations": [
+        {
+          "summary": "Fetches all Properties",
+          "notes": "This lists all Properties",
+          "nickname": "Properties#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/properties.json",
+      "operations": [
+        {
+          "summary": "Creates a new Property",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "addr_line1",
+              "type": "string",
+              "description": "First address line",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "city",
+              "type": "string",
+              "description": "Property's City",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "state",
+              "type": "string",
+              "description": "Property's State",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "zipcode",
+              "type": "string",
+              "description": "Property's zipcode",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "rent",
+              "type": "integer",
+              "description": "Lease's rent, frequency depending on property",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "start_date",
+              "type": "date",
+              "description": "Start date of lease",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "active",
+              "type": "boolean",
+              "description": "Active status of a Property",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Properties#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/properties/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Property",
+          "notes": "This lists the details of one property",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Property ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Properties#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/properties/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates a new Property",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "addr_line1",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "city",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "state",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "zipcode",
+              "type": "string",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "rent",
+              "type": "integer",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "start_date",
+              "type": "date",
+              "description": null,
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "active",
+              "type": "boolean",
+              "description": null,
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Properties#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/properties/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing Property",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Property ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Properties#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

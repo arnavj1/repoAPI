@@ -22,6 +22,7 @@ gem 'bcrypt', '~> 3.1.11'
 gem 'time_date_helpers', '0.0.2'
 gem 'validates_timeliness', '4.0.2'
 
+gem 'swagger-docs'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
