@@ -1,7 +1,7 @@
 class Property < ApplicationRecord
 
     has_many :tenants
-    belongs_to :landlord 
+    belongs_to :landlord
 
 
     validates_presence_of :addr_line1, :city, :state, :zipcode, :rent, :start_date
