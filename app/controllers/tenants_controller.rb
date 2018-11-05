@@ -89,6 +89,6 @@ class TenantsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tenant_params
-      params.permit(:name, :phone, :username, :password, :password_confirmation, :active)
+      params.permit(:name, :phone, :username, :password, :password_confirmation, :property_id, :active)
     end
 end
