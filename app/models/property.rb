@@ -1,6 +1,7 @@
 class Property < ApplicationRecord
 
     has_many :tenants
+    has_many :maintenances
     belongs_to :landlord
 
 
