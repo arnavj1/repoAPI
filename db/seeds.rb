@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Landlord.create([{name: "Jonathan", phone: "6176105413", username: "jonwihl", password: "secret", password_confirmation: "secret"}])
-Tenant.create([{name: "Jonathan", phone: "6176105413", username: "jonwihl", password: "secret", password_confirmation: "secret"}])
-Maintenance.create([{title: "Broken Sink", description: "Sink is not working.", created_on: "11/1/2018"
+
+Property.create([{addr_line1: "5445 Wilins", city: "Pittsburgh", state: "PA", zipcode: "15289", rent: "3452", start_date: Date.current, landlord_id: 1}])
+Tenant.create([{name: "Jonathan", phone: "6176105413", username: "jonwihl", password: "secret", password_confirmation: "secret", property_id: 1}])
+Maintenance.create([{title: "Broken Sink", description: "Sink is not working.", created_on: "11/1/2018", tenant_id: 1, property_id: 1,
                     }])
