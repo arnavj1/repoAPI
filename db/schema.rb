@@ -45,8 +45,10 @@ ActiveRecord::Schema.define(version: 20181016021258) do
     t.date "start_date"
     t.date "end_date"
     t.boolean "active", default: true
+    t.bigint "landlord_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["landlord_id"], name: "index_properties_on_landlord_id"
   end
 
   create_table "reminders", force: :cascade do |t|
@@ -68,4 +70,5 @@ ActiveRecord::Schema.define(version: 20181016021258) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "properties", "landlords"
 end

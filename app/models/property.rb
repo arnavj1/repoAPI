@@ -5,7 +5,7 @@ class Property < ApplicationRecord
 
 
     validates_presence_of :addr_line1, :city, :state, :zipcode, :rent, :start_date
-    validate :not_duplicate?, on: :create
+    # validate :not_duplicate?, on: :create
 
 
 
