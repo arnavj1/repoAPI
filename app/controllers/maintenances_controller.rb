@@ -88,6 +88,6 @@ class MaintenancesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def maintenance_params
-      params.permit(:title, :description, :created_on, :tenant_id, :property_id, :landlord_id, :active)
+      params.permit(:title, :description, :created_on, :tenant_id, :property_id, :active)
     end
 end

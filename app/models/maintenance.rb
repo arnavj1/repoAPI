@@ -1,6 +1,6 @@
 class Maintenance < ApplicationRecord
+    
     belongs_to :tenant
-    belongs_to :landlord
     belongs_to :property
 
     validates_presence_of :title, :description, :created_on

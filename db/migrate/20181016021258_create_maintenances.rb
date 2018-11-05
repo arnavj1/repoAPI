@@ -9,7 +9,6 @@ class CreateMaintenances < ActiveRecord::Migration[5.1]
       t.boolean :active, default: true
       t.references :property, foreign_key: true
       t.references :tenant, foreign_key: true
-      t.references :landlord, foreign_key: true
 
       t.timestamps
     end
