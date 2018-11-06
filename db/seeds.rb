@@ -35,5 +35,9 @@ Tenant.create([{name: "Jonathan", phone: "6176105413", username: "jonwihl", pass
                 {name: "Jonas", phone: "0195738274", username: "jonas", password: "secret", password_confirmation: "secret", property_id: 5}])
 
 
-Maintenance.create([{title: "Broken Sink", description: "Sink is not working.", created_on: "11/1/2018", tenant_id: 1, property_id: 1,
+Maintenance.create([{title: "Broken Sink", description: "Sink is not working.", created_on: "10/1/2018", tenant_id: 1, property_id: 1,
+                    },
+                    {title: "Broken Toilet", description: "Toilet is not working.", created_on: "10/17/2018", tenant_id: 3, property_id: 2,
+                    },
+                    {title: "Mold", description: "Mold in Basement.", created_on: "11/1/2018", tenant_id: 10, property_id: 5,
                     }])
