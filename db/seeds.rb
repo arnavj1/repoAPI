@@ -12,6 +12,7 @@ Landlord.create([{name: "Jonathan", phone: "6176105413", username: "jonwihl", pa
                 {name: "Lou", phone: "8820914372", username: "louis", password: "secret", password_confirmation: "secret"},
                 {name: "Cindy", phone: "4123456981", username: "cindysun", password: "secret", password_confirmation: "secret"}])
 
+
 Property.create([{addr_line1: "5445 Wilkins Ave", city: "Pittsburgh", state: "PA", zipcode: "15289", rent: "3452", start_date: Date.current, landlord_id: 1},
                 {addr_line1: "100 Beeler St", city: "Pittsburgh", state: "PA", zipcode: "15289", rent: "2001", start_date: Date.current, landlord_id: 1},
                 {addr_line1: "5000 Forbes Ave", city: "Pittsburgh", state: "PA", zipcode: "15289", rent: "900", start_date: Date.current, landlord_id: 2},
@@ -22,11 +23,17 @@ Property.create([{addr_line1: "5445 Wilkins Ave", city: "Pittsburgh", state: "PA
                 {addr_line1: "102 Marcus Ave", city: "Pittsburgh", state: "PA", zipcode: "15289", rent: "3452", start_date: Date.current, landlord_id: 5}])
 
 
-# Tenant.create([{name: "Jonathan", phone: "6176105413", username: "jonwihl", password: "secret", password_confirmation: "secret", property_id: 1}])
+Tenant.create([{name: "Jonathan", phone: "6176105413", username: "jonwihl", password: "secret", password_confirmation: "secret", property_id: 1},
+                {name: "AJ", phone: "5083617728", username: "arnavj1", password: "secret", password_confirmation: "secret", property_id: 1},
+                {name: "Keran", phone: "1839204736", username: "keran12", password: "secret", password_confirmation: "secret", property_id: 2},
+                {name: "Porter", phone: "1234213453", username: "porter", password: "secret", password_confirmation: "secret", property_id: 3},
+                {name: "Polly", phone: "1947562748", username: "polly", password: "secret", password_confirmation: "secret", property_id: 3},
+                {name: "Manny", phone: "0193747123", username: "manny", password: "secret", password_confirmation: "secret", property_id: 3},
+                {name: "Sammy", phone: "6176105413", username: "sammy", password: "secret", password_confirmation: "secret", property_id: 4},
+                {name: "Patty", phone: "1018489204", username: "patty", password: "secret", password_confirmation: "secret", property_id: 4},
+                {name: "Robert", phone: "8573920192", username: "robby", password: "secret", password_confirmation: "secret", property_id: 5},
+                {name: "Jonas", phone: "0195738274", username: "jonas", password: "secret", password_confirmation: "secret", property_id: 5}])
 
 
-
-
-
-# Maintenance.create([{title: "Broken Sink", description: "Sink is not working.", created_on: "11/1/2018", tenant_id: 1, property_id: 1,
-#                     }])
+Maintenance.create([{title: "Broken Sink", description: "Sink is not working.", created_on: "11/1/2018", tenant_id: 1, property_id: 1,
+                    }])
