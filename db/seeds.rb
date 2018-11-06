@@ -22,11 +22,11 @@ Property.create([{addr_line1: "5445 Wilkins Ave", city: "Pittsburgh", state: "PA
                 {addr_line1: "102 Marcus Ave", city: "Pittsburgh", state: "PA", zipcode: "15289", rent: "3452", start_date: Date.current, landlord_id: 5}])
 
 
-
-
-
-
-
 # Tenant.create([{name: "Jonathan", phone: "6176105413", username: "jonwihl", password: "secret", password_confirmation: "secret", property_id: 1}])
+
+
+
+
+
 # Maintenance.create([{title: "Broken Sink", description: "Sink is not working.", created_on: "11/1/2018", tenant_id: 1, property_id: 1,
 #                     }])
